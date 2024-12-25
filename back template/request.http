@@ -1,0 +1,44 @@
+
+### Register (non admin user)
+
+POST http://localhost:3000/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "username",
+    "email": "email@email.com",
+    "password": "password"
+}
+
+### Login (non admin user)
+
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "email@email.com",
+    "password": "password"
+}
+
+### Login admin // already seeded
+
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@gmail.com", 
+    "password": "admin"
+}
+
+### Validate
+
+GET http://localhost:3000/validate HTTP/1.1
+
+
+### Logout
+
+POST http://localhost:3000/logout HTTP/1.1
+
+### get all users
+
+GET http://localhost:3000/users
